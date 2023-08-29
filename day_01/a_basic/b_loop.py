@@ -34,7 +34,7 @@ def print_diamond(cnt):
             bl += ' '
         for k in range(2 * i + 1):
             st += '*'
-        ln = bl + st + bl
+        ln = bl + st
         print(ln)
 
     for i in range(cnt - 1, 0, -1):
@@ -44,7 +44,7 @@ def print_diamond(cnt):
             bl += ' '
         for k in range(2 * i - 1):
             st += '*'
-        ln = bl + st + bl
+        ln = bl + st
         print(ln)
 
 
@@ -57,5 +57,5 @@ def print_diamond_1(cnt):
 
 if __name__ == '__main__':
     q1(10)
-    print_diamond(5)
-    print_diamond_1(5)
+    print_diamond(3)
+    print_diamond_1(3)
