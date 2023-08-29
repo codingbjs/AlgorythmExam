@@ -26,24 +26,36 @@ def q1(n):
 #     *
 
 def print_diamond(cnt):
-    if cnt < 3:
-        print("한 변의 길이는 3 이상이어야 합니다.")
-        return
+    ln = ''
+    for i in range(cnt):
+        bl = ''
+        st = ''
+        for j in range(cnt - i):
+            bl += ' '
+        for k in range(2 * i + 1):
+            st += '*'
+        ln = bl + st + bl
+        print(ln)
 
-    # 위쪽 삼각형 출력
-    for i in range(1, cnt + 1, 2):
-        spaces = (cnt - i) // 2
-        stars = i
-        print(" " * spaces + "*" * stars)
+    for i in range(cnt - 1, 0, -1):
+        bl = ''
+        st = ''
+        for j in range(cnt + 1 - i):
+            bl += ' '
+        for k in range(2 * i - 1):
+            st += '*'
+        ln = bl + st + bl
+        print(ln)
 
-    # 아래쪽 삼각형 출력
-    for i in range(cnt - 2, 0, -2):
-        spaces = (cnt - i) // 2
-        stars = i
-        print(" " * spaces + "*" * stars)
+
+def print_diamond_1(cnt):
+    for i in range(cnt):
+        print(' ' * (cnt - i) + '*' * (i * 2 + 1))
+    for i in range(1, cnt):
+        print(' ' * (i + 1) + '*' * ((cnt * 2 - 1) - (2 * i)))
 
 
 if __name__ == '__main__':
     q1(10)
-    print_diamond(6)
-
+    print_diamond(5)
+    print_diamond_1(5)
