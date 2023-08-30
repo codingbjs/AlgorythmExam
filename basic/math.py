@@ -1,4 +1,4 @@
-from math import sqrt
+from cmath import sqrt
 
 
 # 소수 판단 - 1과 자신의 수로만 나누어 지는 수
@@ -82,5 +82,3 @@ def lcm1(a, b):
 # 최소 공배수
 def lcm2(a, b):
     return (a * b) / gcd3(a, b)
-
-
