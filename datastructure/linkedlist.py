@@ -118,6 +118,20 @@ class LinkedList:
 
         return False
 
+    # 역순 정렬
+    def reverse(self):
+        if self.length <= 1:
+            return
+
+        prev = None
+        node = self.head
+        while node:
+            _next = node.next
+            node.next = prev
+            prev = node
+            node = _next
+        self.head = prev
+
     def __iter__(self):
         return LinkedList.Iterator(self.head)
 

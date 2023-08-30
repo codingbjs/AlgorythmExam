@@ -25,8 +25,11 @@ class TestDataStructure(unittest.TestCase):
         print(_list.remove(100))
         print(_list)
 
-        for itme in _list:
-            print(itme)
+        # for itme in _list:
+        #     print(itme)
+
+        _list.reverse()
+        print(_list)
 
 
 if __name__ == '__main__':
