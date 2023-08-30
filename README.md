@@ -7,4 +7,5 @@
 - factorial.py : 양수 팩토리얼 - 반복문, 재귀호출, 꼬리재귀
 - fibonacci.py : 피보나치 수열 - 반복문, 재귀호출, 꼬리재귀
 
-### 2. Data Structure 관련 알고리즘
+### 2. Data Structure 관련 알고리즘 : 자료 구조
+- linkedlist.py : LinkedList 구현
