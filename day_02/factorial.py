@@ -9,12 +9,19 @@ def factorial(a):
 
 
 # 양수 팩토리얼 재귀 호출
+# 파이썬는 재귀호출, 꼬리재귀 최적화를 지원하지 않는다. -> 1000 이상의 값을 대입 시 오류 발생됨. 
 def factorial_redef(n):
     if n <= 0 or n == 1:
         return 1
     return n * factorial_redef(n - 1)
 
+
 # 꼬리재귀
 # 재귀호출 명령이 함수의 제일 마지막에 오면서, 함수의 리턴값이 수식의 일부이지 않는 방식
 # 꼬리개재귀로 작성된 코드는 컴파일러가 내부적으로 반복문으로 변경하여 실행 -> 프레임이 열리고 닫히는 비용이 발생하지 않음
-# 파이썬는 꼬리재귀 최적화를 지원하지 않는다.
+# 파이썬는 재귀호출, 꼬리재귀 최적화를 지원하지 않는다. -> 1000 이상의 값을 대입 시 오류 발생됨.
+def factorial_tail(n, result=1):
+    if n == 0:
+        return result
+    else:
+        return factorial_tail(n - 1, n * result)

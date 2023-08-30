@@ -4,7 +4,7 @@ import unittest
 from day_01.c_math import *
 
 
-class TestBasic(unittest.TestCase):
+class TestDay_01(unittest.TestCase):
     # def test_is_prime(self):
     #     # self.assertTrue(is_prime(2))
     #     pass
