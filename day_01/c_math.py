@@ -82,3 +82,5 @@ def lcm1(a, b):
 # 최소 공배수
 def lcm2(a, b):
     return (a * b) / gcd3(a, b)
+
+
