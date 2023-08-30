@@ -2,10 +2,11 @@ import random
 import unittest
 from math import lcm
 
-from day_01.c_math import *
+from basic.fibonacci import fibonacci
+from basic.math import *
 
 
-class TestDay01(unittest.TestCase):
+class TestBasic(unittest.TestCase):
     # def test_is_prime(self):
     #     # self.assertTrue(is_prime(2))
     #     pass
@@ -35,12 +36,20 @@ class TestDay01(unittest.TestCase):
     #     print(f"gcd({gcd(left, right)}) == gcd3({gcd2(left, right)}) ")
     #     self.assertTrue(gcd(left, right) == gcd3(left, right))
 
-    def test_lcm(self):
-        left = round(random.randrange(1, 1000))
-        right = round(random.randrange(1, 1000))
-        print(f"left  :{left} , right : {right}")
-        print(f"lcm({lcm(left, right)}) == lcm1({lcm1(left, right)}) ")
-        self.assertTrue(lcm(left, right) == lcm1(left, right))
+    # def test_lcm(self):
+    #     left = round(random.randrange(1, 1000))
+    #     right = round(random.randrange(1, 1000))
+    #     print(f"left  :{left} , right : {right}")
+    #     print(f"lcm({lcm(left, right)}) == lcm1({lcm1(left, right)}) ")
+    #     self.assertTrue(lcm(left, right) == lcm1(left, right))
+
+    # def test_factorial(self):
+    #     n = round(random.randrange(1, 20))
+    #     print(f"{n}! = {factorial(n)}")
+
+    def test_fibonacci(self):
+        n = round(random.randrange(1, 20))
+        print(f"{n} fibonacci = {fibonacci(n)}")
 
 
 if __name__ == '__main__':

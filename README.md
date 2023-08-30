@@ -1,10 +1,10 @@
 # Study algorithms
 
-### 1. day-1 파이썬 기본 문법을 활용한 알고리즘
-- day_01/a_condition.py - 비교문 활용
-- day_01/b_loop.py - 반복문 활용 
-- day_01/c_math.py - 소수 판단, 최대공약수, 최소공배수
+### 1. 파이썬 기본 문법을 활용한 알고리즘
+- condition.py - 최대값, 최소값 - 비교문 
+- loop.py - 1~n 가지의 합, 다이아몬드 모양 출력 - 반복문
+- math.py - 소수 판단, 최대공약수, 최소공배수 - math 라이브러리
+- factorial.py - 양수 팩토리얼 - 반복문, 재귀호출, 꼬리재귀
+- fibonacci.py - 피보나치 수열 - 반복문, 재귀호출, 꼬리재귀
 
-### 2. day-2 파이썬 기본 문법을 활용한 알고리즘
-- day_02/factorial.py - 양수 팩토리얼
-- day_02/fibonacci.py - 피보나치 수열
+### 2. Data Structure 관련 알고리즘
