@@ -7,3 +7,4 @@
 
 ### 2. day-2 파이썬 기본 문법을 활용한 알고리즘
 - day_02/factorial.py - 양수 팩토리얼
+- day_02/fibonacci.py - 피보나치 수열

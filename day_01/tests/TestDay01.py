@@ -1,10 +1,11 @@
 import random
 import unittest
+from math import lcm
 
 from day_01.c_math import *
 
 
-class TestDay_01(unittest.TestCase):
+class TestDay01(unittest.TestCase):
     # def test_is_prime(self):
     #     # self.assertTrue(is_prime(2))
     #     pass
@@ -40,8 +41,6 @@ class TestDay_01(unittest.TestCase):
         print(f"left  :{left} , right : {right}")
         print(f"lcm({lcm(left, right)}) == lcm1({lcm1(left, right)}) ")
         self.assertTrue(lcm(left, right) == lcm1(left, right))
-
-
 
 
 if __name__ == '__main__':
