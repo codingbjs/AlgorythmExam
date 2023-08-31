@@ -1,7 +1,7 @@
 import random
 import unittest
 
-from datastructure.list_q import check_max, check_max2, check_palindrome
+from datastructure.list_q import check_max, check_max2, check_palindrome, check_palindrome2
 
 
 class TestListQ(unittest.TestCase):
@@ -23,7 +23,7 @@ class TestListQ(unittest.TestCase):
     def test_palindrome(self):
         texts = ['tomato', '토마토', '기러기', 'Wild goose', '역삼역', 'Yeoksam station']
         for text in texts:
-            if check_palindrome(text):
+            if check_palindrome2(text):
                 print(text + ' 는 회문입니다.')
 
 

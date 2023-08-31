@@ -28,6 +28,19 @@ def check_max2(arr):
 # aabaa - True
 # aaabaa - False
 def check_palindrome(text):
+    left_point = 0
+    right_point = len(text) - 1
+
+    while left_point < right_point:
+        if text[left_point] != text[right_point]:
+            return False
+        left_point += 1
+        right_point -= 1
+
+    return True
+
+
+def check_palindrome1(text):
     rev_text = ""
     for char in text:
         rev_text = char + rev_text
