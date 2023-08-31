@@ -89,3 +89,63 @@ class HashTable:
                 link = link.next
 
         self.length += 1
+
+    def get(self, key: str):
+        if type(key) is not str:
+            raise TypeError('문자열 key 만 입력 가능 합니다.')
+
+        index = self.hash(Node(key, -1))
+        link = self.table[index]
+
+        if link is None:  # 미리 리턴할 것인가 루프를 확인하고 리턴할 것인가 개인취향... ...
+            return None
+
+        while link is not None:
+            if link.key == key:
+                return link.data
+            link = link.next
+
+        return None
+
+    def __contains__(self, key):
+        return True if self.get(key) is not None else False
+
+    def __iter__(self):
+        return HashTable.Iterator(self.table)
+
+    class Iterator:
+        def __init__(self, hashtable):
+            self.hashtable = hashtable
+            self.length = len(hashtable) - 1
+            self.pointer = 0
+            self.link = None
+
+        def __iter__(self):
+            return self
+
+        def __next__(self):
+            if self.pointer == self.length:
+                raise StopIteration
+
+            index = self.hashtable[self.pointer]
+
+            # index 하위에 next 가 있으면 데이타 반환
+            if self.link is not None:
+                data = index.link.data
+                self.link = index.link.next
+                return data
+
+            while index is None:
+                print(f"index is None : {self.pointer}")
+                if self.length == self.pointer:
+                    raise StopIteration
+                self.pointer += 1
+                index = self.hashtable[self.pointer]
+
+            data = index.data
+            if index.next is None:
+                self.pointer += 1
+
+            self.link = index.next
+
+            return data

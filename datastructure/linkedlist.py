@@ -17,9 +17,9 @@ class LinkedList:
         if node is None:
             return '비어있습니다.'
         res = "["
-        while node.next:
+        while node.link:
             res += str(node.data) + ", "
-            node = node.next
+            node = node.link
         res += str(node.data) + "]"
         return res
 
@@ -78,18 +78,18 @@ class LinkedList:
             return None
 
         # node 가 1개 있는 경우
-        if node.next is None:
+        if node.link is None:
             self.head = None
             self.length -= 1
             return node.data
 
         # 노드가 1개 이상인 경우 마지막 데이타를 반환하고 삭제함.
         prev = node
-        while node.next:
+        while node.link:
             prev = node
-            node = node.next
+            node = node.link
 
-        prev.next = None
+        prev.link = None
         self.length -= 1
         return node.data
 
@@ -98,7 +98,7 @@ class LinkedList:
         node = self.head
         if node is None:
             return None
-        self.head = self.head.next
+        self.head = self.head.link
         self.length -= 1
         return node.data
 
@@ -109,12 +109,12 @@ class LinkedList:
             self.popleft()
             return True
 
-        while node.next:
-            if node.next.data == data:
-                node.next = node.next.next
+        while node.link:
+            if node.link.data == data:
+                node.link = node.link.link
                 self.length -= 1
                 return True
-            node = node.next
+            node = node.link
 
         return False
 
@@ -148,7 +148,7 @@ class LinkedList:
                 raise StopIteration
             print(f"{self.call_cnt}번째 호출입니다.{self.node.data}")
             data = self.node.data
-            self.node = self.node.next
+            self.node = self.node.link
             self.call_cnt += 1
             return data
 
