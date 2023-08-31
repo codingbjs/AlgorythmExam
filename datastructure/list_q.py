@@ -21,3 +21,15 @@ def check_max2(arr):
             _max_2 = num
 
     return [_max_1, _max_2]
+
+
+# 앞으로 읽어도, 뒤로 읽어도 같은 단어(회문) 인지 검사하는 함수 작성
+# 기러기, 토마토, 역삼역
+# aabaa - True
+# aaabaa - False
+def check_palindrome(text):
+    rev_text = ""
+    for char in text:
+        rev_text = char + rev_text
+
+    return rev_text == text
