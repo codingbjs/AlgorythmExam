@@ -135,6 +135,7 @@ class HashTable:
                 self.link = index.link.next
                 return data
 
+            # index 가 None 이면 None 이 아닌 index 를 찾을 때 까지 반복
             while index is None:
                 print(f"index is None : {self.pointer}")
                 if self.length == self.pointer:
@@ -142,6 +143,7 @@ class HashTable:
                 self.pointer += 1
                 index = self.hashtable[self.pointer]
 
+            # None 이 아닌 index 를 찾아 데이타 받아 리턴, index.next 가 None 이면 point 증가
             data = index.data
             if index.next is None:
                 self.pointer += 1
