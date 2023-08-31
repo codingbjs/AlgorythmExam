@@ -1,7 +1,7 @@
 # 자연수 배열에서 가장 큰 수 찾기
 
 def check_max(arr):
-    _max = 0
+    _max = arr[0]
     for num in arr:
         if num > _max:
             _max = num
@@ -10,8 +10,8 @@ def check_max(arr):
 
 # 자연수 배열에서 가장 큰 2 수 찾아 배열 반환
 def check_max2(arr):
-    _max_1 = 0
-    _max_2 = 0
+    _max_1 = arr[0]
+    _max_2 = arr[1]
 
     for num in arr:
         if num > _max_1:
