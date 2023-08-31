@@ -9,3 +9,4 @@
 
 ### 2. Data Structure 관련 알고리즘 : 자료 구조
 - linkedlist.py : LinkedList 구현
+- list_q.py : list 관련 연습 문제 - 리스트 중 가장 큰수 찾기, 큰수 2개 찾기
