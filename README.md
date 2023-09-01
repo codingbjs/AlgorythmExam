@@ -11,3 +11,4 @@
 - linkedlist.py : LinkedList 구현
 - list_q.py : list 관련 연습 문제 - 리스트 중 가장 큰수 찾기, 큰수 2개 찾기
 - hashtable.py : HashTable 구현
+- stack.py : stack 구현

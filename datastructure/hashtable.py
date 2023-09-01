@@ -111,11 +111,43 @@ class HashTable:
         return True if self.get(key) is not None else False
 
     def __iter__(self):
-        return HashTable.Iterator(self.table)
+        return HashTable.Iterator(self)
 
     class Iterator:
         def __init__(self, hashtable):
-            self.hashtable = hashtable
+            self.table = hashtable.table
+            self.size = hashtable.length
+            self.table_idx = 0
+            self.node = None
+            self.iter_return_cnt = 0
+
+        def __iter__(self):
+            return self
+
+        # next 는 Node 를 반환 하도록 구현
+        def __next__(self):
+            if self.iter_return_cnt >= self.size:
+                raise StopIteration
+
+            while self.table[self.table_idx] is None:
+                self.table_idx += 1
+
+            if self.node is None:
+                self.node = self.table[self.table_idx]
+
+            tmp = self.node
+            self.node = self.node.next
+
+            if self.node is None:  # 더이상 탐색할 노드가 없으면
+                self.table_idx += 1  # 테이블 인덱스 증가
+
+            self.iter_return_cnt += 1
+            return tmp
+
+
+"""        
+        def __init__(self, hashtable):
+            self.hashtable = hashtable.table
             self.length = len(hashtable) - 1
             self.pointer = 0
             self.link = None
@@ -151,3 +183,4 @@ class HashTable:
             self.link = index.next
 
             return data
+"""
