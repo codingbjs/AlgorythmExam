@@ -1,34 +1,41 @@
 def bubble_sort(arr):
-    while True:
-        swap = False
-        i = 0
-        while i < len(arr) - 1:
-            print(arr)
-            if arr[i] > arr[i + 1]:
-                swap = True
-                arr[i], arr[i+1] = arr[i+1], arr[i]
-                # temp = arr[i + 1]
-                # arr[i + 1] = arr[i]
-                # arr[i] = temp
-            i += 1
-
-        if not swap:
-            return arr
-
-
-def linear_sort(arr):
     i = 0
     while i < len(arr) - 1:
-        j = i + 1
-        while j < len(arr):
-            if arr[i] > arr[j]:
-                temp = arr[i]
-                arr[i] = arr[j]
-                arr[j] = temp
+        j = 0
+        while j < len(arr) - 1:
+            if arr[j] > arr[j + 1]:
+                arr[j], arr[j + 1] = arr[j + 1], arr[j]
             j += 1
         i += 1
-
     return arr
 
 
-print(bubble_sort([5, 1, 4, 2, 8]))
+def bubble_sort1(arr):
+    for i in range(len(arr) - 1):
+        for j in range(len(arr) - 1):
+            if arr[j] > arr[j + 1]:
+                arr[j], arr[j + 1] = arr[j + 1], arr[j]
+    return arr
+
+
+def bubble_sort2(arr):
+    for i in range(len(arr) - 1, 0, -1):  # 4,3,2,1 감소 마지막 배열의 비교를 감소
+        for j in range(i):
+            if arr[j] > arr[j + 1]:
+                arr[j], arr[j + 1] = arr[j + 1], arr[j]
+    return arr
+
+
+def bubble_sort3(arr):
+    for i in range(len(arr) - 1, 0, -1):  # 4,3,2,1 감소 마지막 배열의 비교를 감소
+        flg = False
+        for j in range(i):
+            if arr[j] < arr[j + 1]:
+                arr[j], arr[j + 1] = arr[j + 1], arr[j]
+                flg = True
+        if not flg:
+            return arr
+    return arr
+
+
+

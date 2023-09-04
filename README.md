@@ -20,3 +20,4 @@
 
 ### 4. 정렬 알고리즘
 - bubble_sort.py : 버블 정렬
+- selection_sort.py : Selection 정렬
