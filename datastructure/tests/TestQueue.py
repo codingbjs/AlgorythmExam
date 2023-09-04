@@ -9,12 +9,12 @@ class TestQueue(unittest.TestCase):
         for i in range(10):
             queue.enqueue(i)
 
-            # ----여기부터
+            # 여기부터
         for i in range(10):
             print(queue.dequeue(), end='')
 
         print()
-        # ------ 여기 지우면 큐가 들어감
+        # 여기 지우면 큐가 들어감
         print(queue)
 
 
