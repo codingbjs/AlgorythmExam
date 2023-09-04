@@ -4,22 +4,10 @@
 # 매개변수로 전달 받은 숫자 까지 존재하는 종말의 숫자(666 이 들어간 숫자)를 담은 배열을 리턴
 def doom_day(n):
     doom_list = []
-    i = 666
-    while True:
-        if len(doom_list) == n:
-            return doom_list
-        doom_list.append(i)
-        i += 1000
-
-
-def doom_day1(n):
-    doom_list = []
-    doom_num = 666
     i = 0
     while True:
-        if i == doom_num:
+        if "666" in str(i):
             doom_list.append(i)
-            doom_num += 1000
             if len(doom_list) == n:
                 return doom_list
         i += 1

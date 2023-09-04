@@ -8,7 +8,6 @@ class TestQuiz(unittest.TestCase):
     def test_quiz(self):
         n = round(random.randrange(1, 11))
         print(doom_day(n))
-        print(doom_day1(n))
 
     def test_dwarf(self):
         arr = [round(random.randrange(10, 15)) for _ in range(7)]
