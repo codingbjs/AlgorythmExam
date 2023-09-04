@@ -16,7 +16,7 @@ def bubble_sort(arr):
             return arr
 
 
-def liner_sort(arr):
+def linear_sort(arr):
     i = 0
     while i < len(arr) - 1:
         j = i + 1
