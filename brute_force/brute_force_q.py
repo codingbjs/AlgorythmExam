@@ -21,14 +21,13 @@ def doom_day(n):
 """
 
 
-def dwarf(arr):
-    for i in range(len(arr)):
-        tot = 0
-        tot_list = {}
-        for j in range(len(arr)):
-            if j == i or j == i + 1:    # 7개의 배열 요소만 더하기 위해 2개 의 요소는 제외
-                continue
-            tot += arr[j]
-            tot_list[j] = arr[j]
-        if tot == 100:
-            return tot_list
+def dwarf(arr: list):
+    s = sum(arr)
+    for i in range(len(arr) - 1):
+        for j in range(i + 1, len(arr)):
+            if s - arr[i] - arr[j] == 100:
+                a, b = arr[i], arr[j]
+                arr.remove(a)
+                arr.remove(b)
+                return arr
+    return arr
