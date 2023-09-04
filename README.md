@@ -13,3 +13,10 @@
 - hashtable.py : HashTable 구현
 - stack.py : stack 구현
 - queue.py : Queue 구현
+
+### 3. 검색 알고리즘
+- linear.py : 선형 검색
+- binary.py : 이진 검색
+
+### 4. 정렬 알고리즘
+- bubble_sort.py : 버블 정렬
