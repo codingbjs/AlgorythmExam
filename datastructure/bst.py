@@ -36,11 +36,11 @@ class BinarySearchTree:
     # 깊이 우선 탐색
     def dfs(self, _type):
         type_dict = {
-            'inorder': self.__in_order,
-            'preorder': self.__pre_order,
-            'postorder': self.__post_order,
+            'inorder': self.__in_order(self.root),
+            'preorder': self.__pre_order(self.root),
+            'postorder': self.__post_order(self.root),
         }
-        return type_dict.get(_type)(self.root)
+        return type_dict.get(_type)
 
     def __in_order(self, link):
         res = []
