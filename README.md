@@ -22,3 +22,10 @@
 - bubble_sort.py : 버블 정렬
 - selection_sort.py : Selection 정렬
 - brute_force_q.py : 검색 관련 퀴즈
+
+### 5. 분할 정복(Divide and conquer)
+- 분할 : 문제의 사례를 둘 이상의 충분히 작은 사례로 분할
+- 정복 : 작은 사례를 각각 정복
+- 통합 : 필요하면, 작은 사례의 헤답을 통합해 원래 사계의 해답을 도출
+- merge_sort.py : 머지 정렬
+- 
