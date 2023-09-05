@@ -30,3 +30,4 @@
 - merge_sort.py : 머지 정렬 - 단점 정렬 속도는 빨라지지만 배열 분할 시 2n개의 배열이 메모리에 올라간다.
 - merge_sort_2.py : 머지 정렬 - 메모리 단점 보완 n개의 배열만 메모리에 올라간다.
 - quick_sort.py : 퀵 정렬
+- quick_sort_2.py : 퀵 정렬 2
