@@ -3,10 +3,10 @@ def partition_2(arr, low, high):
     i = low + 1
     j = high
     while i <= j:
-        while arr[i] < pivot_item and i < high:
+        while arr[i] < pivot_item and i < j:
             i += 1
 
-        while arr[j] > pivot_item and j > low:
+        while arr[j] > pivot_item and j > i:
             j -= 1
 
         if i <= j:  # i와 j의 값이 같거나 역전되지 않았을 때만 교환
