@@ -20,5 +20,13 @@ def merge(arr1, arr2):
 
 
 def merge_sort(arr):
-    if len(arr) <= 1:
+    n = len(arr)
+
+    if n <= 1:
         return arr
+
+    mid = n // 2    # 리스트를 반으로 나누기
+    arr1 = merge_sort(arr[0:mid])   # 리스트의 앞부분 절반 재귀호출로 다시 나누기
+    arr2 = merge_sort(arr[mid:n])   # 리스트의 뒷부분 절반 재귀호출로 다시 나누기
+
+    return merge(arr1, arr2)

@@ -1,7 +1,7 @@
 import random
 import unittest
 
-from divide_qonqure.merge_sort import merge
+from divide_qonqure.merge_sort import *
 
 
 class TestMerge(unittest.TestCase):
@@ -11,6 +11,10 @@ class TestMerge(unittest.TestCase):
         arr1.sort()
         arr2.sort()
         print(merge(arr1, arr2))
+
+    def test_merge_sort(self):
+        arr1 = [round(random.randrange(1, 1000)) for _ in range(1000)]
+        print(merge_sort(arr1))
 
 
 if __name__ == '__main__':
