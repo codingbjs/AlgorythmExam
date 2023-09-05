@@ -33,6 +33,19 @@ class BinarySearchTree:
                     break
                 link = link.right_child
 
+    def find(self, data):
+        link = self.root
+
+        while True:
+            if link is None:
+                return False
+            elif data == link.data:
+                return True
+            elif data < link.data:
+                link = link.left_child
+            else:
+                link = link.right_child
+
     # 깊이 우선 탐색
     def dfs(self, _type):
         type_dict = {

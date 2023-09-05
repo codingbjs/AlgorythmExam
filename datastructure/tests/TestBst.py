@@ -21,6 +21,8 @@ class TestBinarySearchTree(unittest.TestCase):
         print(bst.dfs('inorder'))
         print(bst.dfs('preorder'))  # 전위순회하여 결과를 반환
         print(bst.dfs('postorder'))  # 후위순회하여 결과를 반환
+        print(bst.find(6))
+        print(bst.find(15))
 
 
 if __name__ == '__main__':
