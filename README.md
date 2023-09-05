@@ -13,6 +13,7 @@
 - hashtable.py : HashTable 구현
 - stack.py : stack 구현
 - queue.py : Queue 구현
+- bst.py : 이진 트리 구현
 
 ### 3. 검색 알고리즘
 - linear.py : 선형 검색
