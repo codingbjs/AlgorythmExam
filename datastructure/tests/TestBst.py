@@ -13,14 +13,14 @@ class TestBinarySearchTree(unittest.TestCase):
 
         print(bst.dfs('inorder'))
 
-    # def test_dfs(self):
-    #     bst = BinarySearchTree()
-    #     for i in [8, 3, 10, 1, 6, 14, 4, 7, 13]:
-    #         bst.insert(i)
-    #
-    #     print(bst.dfs('inorder'))
-    #     # print(bst.dfs('preorder'))  전위순회하여 결과를 반환
-    #     # print(bst.dfs('postorder')) 후위순회하여 결과를 반환
+    def test_dfs(self):
+        bst = BinarySearchTree()
+        for i in [8, 3, 10, 1, 6, 14, 4, 7, 13]:
+            bst.insert(i)
+
+        print(bst.dfs('inorder'))
+        print(bst.dfs('preorder'))  # 전위순회하여 결과를 반환
+        print(bst.dfs('postorder'))  # 후위순회하여 결과를 반환
 
 
 if __name__ == '__main__':

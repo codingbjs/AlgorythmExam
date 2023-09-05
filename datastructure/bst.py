@@ -9,6 +9,7 @@ class Node:
 
 
 class BinarySearchTree:
+
     def __init__(self):
         self.root = None
 
@@ -34,7 +35,11 @@ class BinarySearchTree:
 
     # 깊이 우선 탐색
     def dfs(self, _type):
-        type_dict = {'inorder': self.__in_order}
+        type_dict = {
+            'inorder': self.__in_order,
+            'preorder': self.__pre_order,
+            'postorder': self.__post_order,
+        }
         return type_dict.get(_type)(self.root)
 
     def __in_order(self, link):
@@ -52,7 +57,29 @@ class BinarySearchTree:
         return res
 
     def __pre_order(self, link):
-        pass
+        res = []
+
+        if link is not None:
+            res += [link.data]
+
+        if link.left_child is not None:
+            res += self.__pre_order(link.left_child)
+
+        if link.right_child is not None:
+            res += self.__pre_order(link.right_child)
+
+        return res
 
     def __post_order(self, link):
-        pass
+        res = []
+
+        if link.left_child is not None:
+            res += self.__post_order(link.left_child)
+
+        if link.right_child is not None:
+            res += self.__post_order(link.right_child)
+
+        if link is not None:
+            res += [link.data]
+
+        return res
