@@ -31,3 +31,4 @@
 - merge_sort_2.py : 머지 정렬 - 메모리 단점 보완 n개의 배열만 메모리에 올라간다.
 - quick_sort.py : 퀵 정렬
 - quick_sort_2.py : 퀵 정렬 2
+- divide_qonqure_q.py : 문제 : 거듭제곱 최적화 
