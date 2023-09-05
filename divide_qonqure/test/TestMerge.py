@@ -30,7 +30,7 @@ class TestMerge(unittest.TestCase):
         print(arr1)
 
     def test_quick_sort_2(self):
-        arr1 = [round(random.randrange(1, 1000)) for _ in range(10)]
+        arr1 = [round(random.randrange(1, 1000)) for _ in range(1000)]
         quick_sort_2(arr1, 0, len(arr1)-1)
         print(arr1)
 
