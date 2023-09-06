@@ -8,3 +8,4 @@ def fibonacci_recur(n, memo=[None for _ in range(100)]):
         return memo[n]
 
     memo[n] = fibonacci_recur(n - 1, memo) + fibonacci_recur(n - 2, memo)
+    return memo[n]
