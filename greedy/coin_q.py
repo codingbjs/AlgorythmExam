@@ -20,5 +20,14 @@ def coin_combi(change):
     return coin_counts
 
 
-print(coin_combi(3465))
+def coin_combi_1(change):
+    coins = {500: 0, 100: 0, 50: 0, 10: 0, 1: 0}
+    for coin in coins:
+        coins[coin] = change // coin  # 해당 동전으로 얼마나 사용할 수 있는지 계산
+        change = change % coin  # 나머지 금액 계산
 
+    return coins
+
+
+print(coin_combi(3465))
+print(coin_combi_1(3465))
