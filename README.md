@@ -34,5 +34,6 @@
 - quick_sort_2.py : 퀵 정렬 2
 - divide_qonqure_q.py : 문제 : 거듭제곱 최적화
 - 
-### 6. 탐욕법 (Greedy Algorithm)
+### 6. 탐욕법(Greedy Algorithm)
 - coin_q.py : 동전 선택 문제
+- meetingroom.py : 회의실 사용 시간 선택 문제
