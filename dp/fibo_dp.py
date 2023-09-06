@@ -9,3 +9,16 @@ def fibonacci_recur(n, memo=[None for _ in range(100)]):
 
     memo[n] = fibonacci_recur(n - 1, memo) + fibonacci_recur(n - 2, memo)
     return memo[n]
+
+
+def fibo_dp_2(n):
+    temp = [1, 1]
+
+    if n < 2:
+        return temp[-1]
+
+    for i in range(2, n + 1):
+        temp.append(temp[i - 2] + temp[i - 1])
+
+    return temp
+
