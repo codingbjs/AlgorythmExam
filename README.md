@@ -37,3 +37,6 @@
 ### 6. 탐욕법(Greedy Algorithm)
 - coin_q.py : 동전 선택 문제
 - meetingroom.py : 회의실 사용 시간 선택 문제
+
+### 7. 동적 프로그래밍(Dynamic Programming)
+- fibo_dp.py : 피보나치 수열의 재귀 호출 값을 메모리에 저장 메모리 저장 데이터 활용
