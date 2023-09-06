@@ -32,7 +32,21 @@ def schedule_meeting(_meetings):
     return selected_meetings
 
 
+def schedule_meeting_1(_meetings):
+    res = []
+    sort_meetings = sorted(_meetings, key=lambda el: el['end'])
+
+    res.append(sort_meetings[0])
+
+    for e in sort_meetings[1:]:
+        if res[-1]['end'] <= e['start']:
+            res.append(e)
+
+    return res
+
+
 print(schedule_meeting(meetings))
+print(schedule_meeting_1(meetings))
 
 """
 [{'idx': 2, 'start': 5, 'end': 6}, {'idx': 5, 'start': 8, 'end': 14}, {'idx': 4, 'start': 14, 'end': 17}]
