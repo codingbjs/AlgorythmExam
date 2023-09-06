@@ -1,3 +1,6 @@
+from datastructure.queue import Queue
+
+
 class Node:
     def __init__(self, data):
         self.data = data
@@ -96,3 +99,24 @@ class BinarySearchTree:
             res += [link.data]
 
         return res
+
+    # 너비 우선 탐색
+    def bfs(self):
+        que = Queue()
+        que.enqueue(self.root)
+        level = 0
+
+        while not que.is_empty():
+            print(f'level {level} : ', end=' ')
+            length = len(que)
+
+            for i in range(length):
+                node = que.dequeue()
+                print(node.data, end=' ')
+
+                if node.left_child is not None:
+                    que.enqueue(node.left_child)
+                if node.right_child is not None:
+                    que.enqueue(node.right_child)
+            print()
+            level += 1
